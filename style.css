@@ -3,25 +3,33 @@ main{
     z-index: 0;
 }
 h1{
-    font-size: 36px;
+    font-size: 60px;
     text-align: center;
     font-style: italic;
     width: 500px;
-    /*margin: 0 auto;*/
+    padding: -20px;
+    text-shadow: 3px 3px rgba(255, 255, 255, 0.319);
 }
 h1 p{
     text-align: left;    
 }
-#greeting{
-    font-size: 60px;
+#greeting{/*On the home page, smaller text underneath first part of h1*/
+    font-size: 36px;
 }
-.weeklyDevBlogs ul li div{
+.weeks{/*for the expanded weekly dev blog paragraphs (all of them grouped together) */
+    display: none;
+}
+.weeks:target
+{
+    display: block;
+}
+.weeklyDevBlogs ul li div{ /*containers for weekly dev blogs. .weeklyDevBlogs is the section of the page that shows the weekly dev blog section in its entirety*/
     width: 60%;
     margin: 0 auto;
     margin-top: 30px;
     padding: 15px;
     background-color: rgba(245, 245, 220, 0.499);
-    border-radius: 15px;
+    border-radius: 10px;
     box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
 -webkit-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
@@ -30,10 +38,43 @@ h1 p{
 .weeklyDevBlogs ul li{
     list-style: none;
 }
+.weeklyDevBlogs>ul>li>div{
+    padding-bottom: 50px;
+}
 .weeklyDevBlogs ul li div h2{
     text-align: center;
 }
-.introText{
+.check{/*checkbox class - checkboxes hidden*/
+    display: none;
+}
+#WkOne:checked ~ #weekfirst{/*week x dev blog content expanded*/
+    display: block;
+}
+
+#WkOne:not(:checked) ~ #weekfirst{
+    display: none;
+}
+#WkTwo:checked ~ #weekSecond{
+    display: block;
+}
+#WkTwo:checked ~ #weekTwoLabel{
+    background-color: rgba(255, 99, 71, 0.449);
+}
+#WkTwo:not(:checked) ~ #weekSecond{
+    display: none;
+}
+.expandBtn{/*label corresponding to checkbox - click to expand/collapse weekly dev blog paragraphs*/
+    float: right;
+    text-align: center;
+    margin: 0 auto;
+    background-color: beige;
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.introText{/*Home page text underneath header*/
     margin: 0 auto;
     margin-top: 30px;
     width: 700px;
@@ -43,6 +84,26 @@ h1 p{
     box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
 -webkit-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
+}
+#writing{/*WDB h1 centred*/
+    text-align: center;
+    margin: 0 auto;
+    padding: 30px;
+}
+#WDBandAW{ /*WDB subheadings to switch between WDB and Additional research*/
+    margin: 0 auto;
+    text-align: center;
+}
+#WDBandAW a{
+   margin: 50px;
+   margin-bottom: 100px;
+   padding: 15px;
+   font-size: 25px;
+   text-decoration: none;
+   color: black;
+   font-style: italic;
+   background-color: rgba(255, 99, 71, 0.478); 
+   border-radius: 7px;
 }
 .introText > a{
     text-align: right;
@@ -56,14 +117,14 @@ h1 p{
     -webkit-box-shadow: -1px 1px 22px -1px rgba(0,0,0,0.75);
     -moz-box-shadow: -1px 1px 22px -1px rgba(0,0,0,0.75);
 }
-img{
+img{/*profile pictures*/
     border-radius: 80px;
     margin: 0 30px;
     box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
 -webkit-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
 }
-.container{
+.container{/*Contains the block on home page that holds h1 and profile pic*/
     display: flex;
     justify-content: center;
 }
