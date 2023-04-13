@@ -1,6 +1,9 @@
 main{
-    padding-top: 200px;
+    padding-top: 50px;
     z-index: 0;
+}
+#homepage{
+    padding-top: 200px;
 }
 h1{
     font-size: 60px;
@@ -23,7 +26,7 @@ h1 p{
 {
     display: block;
 }
-.weeklyDevBlogs ul li div{ /*containers for weekly dev blogs. .weeklyDevBlogs is the section of the page that shows the weekly dev blog section in its entirety*/
+.WeeklyContent ul li div{ /*containers for weekly dev blogs. .weeklyDevBlogs is the section of the page that shows the weekly dev blog section in its entirety*/
     width: 60%;
     margin: 0 auto;
     margin-top: 30px;
@@ -34,14 +37,13 @@ h1 p{
 -webkit-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
 }
-
-.weeklyDevBlogs ul li{
+.WeeklyContent ul li{
     list-style: none;
 }
-.weeklyDevBlogs>ul>li>div{
+.WeeklyContent>ul>li>div{
     padding-bottom: 50px;
 }
-.weeklyDevBlogs ul li div h2{
+.WeeklyContent ul li div h2{
     text-align: center;
 }
 .check{/*checkbox class - checkboxes hidden*/
@@ -50,7 +52,9 @@ h1 p{
 #WkOne:checked ~ #weekfirst{/*week x dev blog content expanded*/
     display: block;
 }
-
+#WkOne:checked ~ #weekOneLabel{
+    background-color: rgba(255, 99, 71, 0.449);
+}
 #WkOne:not(:checked) ~ #weekfirst{
     display: none;
 }
@@ -85,25 +89,41 @@ h1 p{
 -webkit-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
 }
-#writing{/*WDB h1 centred*/
+.writing{/*WDB h1*/
     text-align: center;
     margin: 0 auto;
-    padding: 30px;
+    padding: 80px;
 }
 #WDBandAW{ /*WDB subheadings to switch between WDB and Additional research*/
     margin: 0 auto;
     text-align: center;
 }
-#WDBandAW a{
-   margin: 50px;
-   margin-bottom: 100px;
-   padding: 15px;
-   font-size: 25px;
-   text-decoration: none;
-   color: black;
-   font-style: italic;
-   background-color: rgba(255, 99, 71, 0.478); 
-   border-radius: 7px;
+#WeekDev:checked ~ .WeeklyContent{
+    display: none;
+}
+#WeekDev:not(:checked) ~ .WeeklyContent{
+    display: block;
+}
+.WeeklyContent{
+    display: block;
+}
+#WeekDev:not(:checked) ~ #WDBandAW>#wdbSelected{
+    background-color: rgba(245, 245, 220, 0.5);
+}
+#AR:checked ~ #WDBandAW>#arSelected{
+    background-color: rgba(245, 245, 220, 0.5);
+}
+.pageToggle{
+    margin: 50px;
+    margin-bottom: 100px;
+    padding: 15px;
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+    font-style: italic;
+    background-color: rgb(255, 99, 71, 0.5);
+    border-radius: 7px; 
+    cursor: pointer;
 }
 .introText > a{
     text-align: right;
@@ -127,4 +147,15 @@ img{/*profile pictures*/
 .container{/*Contains the block on home page that holds h1 and profile pic*/
     display: flex;
     justify-content: center;
+}
+.general-border{
+    background-color: rgba(245, 245, 220, 0.50);
+    /*text-align: center;*/
+    width: 600px;
+    margin: 0 auto;
+    border-radius: 7px;
+    box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
+    padding: 30px;
 }

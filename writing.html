@@ -14,21 +14,28 @@
         <ul>
           <li id="logo"><a href="/index.html">Kevin's Portfolio Site</a></li>
           <li>
-            <a href="index.html" class="headerOption">Home</a>
+            <a id="home" href="index.html" class="headerOption">Home</a>
             <a href="writing.html" class="headerOption">Blog/Essay</a>
             <a href="design.html" class="headerOption">Design</a>
+            <a href="essay.html" class="headerOption">Essay</a>
             <a href="aboutme.html" class="headerOption">About Me</a>
-            <a href="aboutme.html" class="headerOption">Essay</a>
           </li>
         </ul>
       </nav>
     </header>
     <main>
-      <h1 id="writing">Writing and Research</h1>
+      <input type="checkbox" id="WeekDev" class="check" />
+      <input type="checkbox" id="AR" class="check" />
+      <h1 class="writing">Writing and Research</h1>
       <div id="WDBandAW">
-        <a href="">Weekly Dev Blogs</a><a href="">Additional Research</a>
+        <label for="WeekDev" id="wdbSelected" class="pageToggle"
+          >Weekly Dev Blogs</label
+        >
+        <label for="AR" class="pageToggle" id="arSelected"
+          >Additional Research</label
+        >
       </div>
-      <div class="weeklyDevBlogs">
+      <div class="WeeklyContent">
         <ul>
           <li>
             <div>
@@ -91,7 +98,9 @@
                   internet.
                 </p>
               </div>
-              <label for="WkOne" class="expandBtn">cheese </label>
+              <label for="WkOne" class="expandBtn" id="weekOneLabel"
+                >Toggle
+              </label>
             </div>
             <div>
               <h2>Week 2</h2>
@@ -160,7 +169,7 @@
                 </p>
               </div>
               <label for="WkTwo" class="expandBtn" id="weekTwoLabel"
-                >cheese
+                >Toggle
               </label>
             </div>
             <div>
@@ -193,6 +202,15 @@
           </li>
         </ul>
       </div>
+      <section id="extraResearch">
+        <ul>
+          <li>
+            <article></article>
+            <article></article>
+            <article></article>
+          </li>
+        </ul>
+      </section>
     </main>
   </body>
 </html>
