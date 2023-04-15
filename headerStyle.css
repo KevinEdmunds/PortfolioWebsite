@@ -23,7 +23,32 @@ header nav ul li{
 header nav ul li{
     display: inline-block;
 }
-header nav ul li a{
+.headerOption{
+    color:rgb(0, 0, 0);
+    display: inline;
+    list-style-type: none;
+
+    font-style: normal;
+    opacity: 100%;  
+    border-radius: 7px;
+    padding: 10px 10px 10px 10px;
+    margin: 30px;
+    margin-top: 5px;
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 15px;
+    background-color: beige;
+    box-shadow: -1px 1px 22px -1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -1px 1px 22px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 1px 22px -1px rgba(0,0,0,0.75);
+   
+}
+a:not(#logo a):hover{
+    box-shadow: 0px -1px 24px 0px rgba(255,255,255,0.75);
+-webkit-box-shadow: 0px -1px 24px 0px rgba(255,255,255,0.75);
+-moz-box-shadow: 0px -1px 24px 0px rgba(255,255,255,0.75);
+}
+/*header nav ul li a{
     color:rgb(0, 0, 0);
     display: inline;
     list-style-type: none;
@@ -36,26 +61,26 @@ header nav ul li a{
     margin-top: 5px;
     text-decoration: none;
    
-}
+}*//*
 header nav ul li a:not(#logo a){
     margin-right: 10px;
     font-size: 15px;
     background-color: beige;
     box-shadow: -1px 1px 22px -1px rgba(0,0,0,0.75);
     -webkit-box-shadow: -1px 1px 22px -1px rgba(0,0,0,0.75);
-    -moz-box-shadow: -1px 1px 22px -1px rgba(0,0,0,0.75);*-
-}
+    -moz-box-shadow: -1px 1px 22px -1px rgba(0,0,0,0.75);
+}*/
 
 body{
     font-family: Tahoma, sans-serif;
 }
-header #logo{
+/*header*/ #logo{
     float: left;
     margin-top: 4px;
-    margin-left: -50px;
+    margin-left: 25px;
     /*margin-right: 50px;*/
 }
-header #logo a{
+/*header*/ #logo a{
     font-size: 48px;
     font-style:normal;
     text-decoration: none;
@@ -68,4 +93,13 @@ header #logo a{
         display: block;
         padding: 30px 0;
     }
+}
+#HomePage:not(:checked) ~ header nav ul li #HomeButton{
+    background-color: tomato;
+}
+#HomePage:not(:checked) ~ header{
+    background-color: tomato;
+}
+header nav ul li #HomeButton a{
+    background-color: blue;
 }

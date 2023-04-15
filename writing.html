@@ -15,10 +15,10 @@
           <li id="logo"><a href="/index.html">Kevin's Portfolio Site</a></li>
           <li>
             <a id="home" href="index.html" class="headerOption">Home</a>
-            <a href="writing.html" class="headerOption">Blog/Essay</a>
+            <a href="writing.html" class="headerOption">Blogs</a>
             <a href="design.html" class="headerOption">Design</a>
             <a href="essay.html" class="headerOption">Essay</a>
-            <a href="aboutme.html" class="headerOption">About Me</a>
+            <a href="aboutme.html" class="headerOption">About</a>
           </li>
         </ul>
       </nav>
@@ -27,26 +27,27 @@
       <input type="checkbox" id="WeekDev" class="check" />
       <input type="checkbox" id="AR" class="check" />
       <h1 class="writing">Writing and Research</h1>
-      <div id="WDBandAW">
+      <section id="WDBandAW">
         <label for="WeekDev" id="wdbSelected" class="pageToggle"
           >Weekly Dev Blogs</label
         >
         <label for="AR" class="pageToggle" id="arSelected"
           >Additional Research</label
         >
-      </div>
-      <div class="WeeklyContent">
+      </section>
+      <section class="WeeklyContent">
+        <h2>Weekly Dev Blogs</h2>
         <ul>
           <li>
-            <div>
-              <h2>Week 1</h2>
+            <article>
+              <h3>Week 1</h3>
               <input type="checkbox" id="WkOne" class="check" />
               <p>
-                Experience setting up Git, reflection on Bush’s “As We May
-                Think” and Borges’ “The Library of Babel”, and goals for the
+                Experience setting up Git, reflection on Bush's “As We May
+                Think” and Borges' “The Library of Babel”, and goals for the
                 course
               </p>
-              <div class="weeks" id="weekfirst">
+              <article class="weeks" id="weekfirst">
                 <p>
                   <strong>Setting up GitHub:</strong> I have set up and briefly
                   used GitHub prior to this course. I have taken the opportunity
@@ -82,7 +83,7 @@
                   “The Library of Babel” was a fictional metaphorical piece,
                   which I interpreted as a warning of overabundance of
                   information (like the internet is today). I think that it is
-                  true that we are oversaturated with information – similar to
+                  true that we are oversaturated with information - similar to
                   the previous reading. Perhaps it is part of our responsibility
                   as future web developers to present information to people in a
                   way that is not overwhelming?
@@ -97,13 +98,13 @@
                   responsibilities are regarding what we put out onto the
                   internet.
                 </p>
-              </div>
+              </article>
               <label for="WkOne" class="expandBtn" id="weekOneLabel"
                 >Toggle
               </label>
-            </div>
-            <div>
-              <h2>Week 2</h2>
+            </article>
+            <article>
+              <h3>Week 2</h3>
               <input type="checkbox" id="WkTwo" class="check" />
               <p>
                 My experience starting with HTML, reflection on the Bruce Lawson
@@ -111,7 +112,7 @@
                 “How A Screen Reader User Accesses The Web: A Smashing Video”,
                 and the lecture on Internet histories
               </p>
-              <div class="weeks" id="weekSecond">
+              <article class="weeks" id="weekSecond">
                 <p>
                   <strong>Experience starting with HTML: </strong> starting with
                   HTML: Starting to work with HTML was a fun experience. My
@@ -144,7 +145,7 @@
                 <p>
                   I also watched the video “How A Screen Reader User Accesses
                   The Web: A Smashing Video”. This was eye-opening to me,
-                  because I’ve never thought of the fact that some people have
+                  because I've never thought of the fact that some people have
                   to access the internet in a non-visual way. It makes sense
                   that screen readers exist, as a manner of including people who
                   would struggle to use technology without tools to make it
@@ -165,49 +166,233 @@
                   many fond memories of playing browser games on the MiniClips
                   website, a website that made significant usage of Flash. It
                   has also been interesting to see how the internet has been
-                  monopolized throughout it’s life cycle.
+                  monopolized throughout its life cycle.
                 </p>
-              </div>
+              </article>
               <label for="WkTwo" class="expandBtn" id="weekTwoLabel"
                 >Toggle
               </label>
-            </div>
-            <div>
-              <h2>Week 3</h2>
+            </article>
+            <article>
+              <h3>Week 3</h3>
               <input type="checkbox" id="WkThree" class="check" />
-              <p>This is the descripion</p>
-              <div class="weeks" id="weekThird">
-                <p>This is the descripion</p>
-              </div>
-              <label for="WkThree" class="expandBtn">cheese </label>
-            </div>
-            <div>
-              <h2>Week 4</h2>
+              <p>
+                Website development progress, reflection on the Mailloux piece
+                titled “Convention and Context”, how it relates to the lecture
+                we had (and how all that all ties into UI and UX), and thoughts
+                on the supplementary lecture material that is available to us.
+              </p>
+              <article class="weeks" id="weekThird">
+                <p>
+                  <strong> Developments of website development:</strong> This
+                  week we were introduced to CSS, the tool that it is primarily
+                  responsible for styling our websites. Last week, while I was
+                  trying to create a wireframe, I struggled to create a vision
+                  for myself. This is largely because I was unsure of what would
+                  even be possible. After some exposure to CSS, however, it has
+                  been somewhat easier to imagine my website. From what I've
+                  seen, a fair amount of CSS seems to be about experimenting
+                  with values until the perfect ones are found. This will not
+                  change how I approach developing my wireframe. Now that I know
+                  what is possible, I will use CSS as an opportunity to refine
+                  my website, into exactly what I want it to be (with the
+                  wireframe being a rough idea).
+                </p>
+                <p>
+                  <strong
+                    >The reading, lecture, and how it ties into UI and
+                    UX:</strong
+                  >
+                  Mailloux's Convention and Context had some insight that I
+                  think is valuable when considering how we choose to design our
+                  websites. Convention can be defined as commonly accepted
+                  practice within some context (Mailloux 1983: 399). In the
+                  context of UI and UX for web development, convention plays an
+                  important role for how we design websites for people to use.
+                  Feedback and responsiveness are conventional, because it tells
+                  the user that the actions that they are wanting to complete
+                  are understood. We make use of pre-existing website structures
+                  (even if we aren't necessarily aware of it) because they are
+                  familiar and make for an easy experience to a user who might
+                  not have ever visited our websites before. An example of this
+                  is search bars, which commonly appear in the header of
+                  websites. It would be unconventional to hide a search bar on
+                  the footer of a page because most people wouldn't think to
+                  look for it there.
+                </p>
+                <p>
+                  It is important to acknowledge when convention must be used in
+                  a sparing manner, as convention can limit innovation. While it
+                  helps to be familiar, it is equally important to think outside
+                  the box and push the boundaries to create new conventions to
+                  be used in the future/create experiences that are unique and
+                  memorable. The context of web development is changing (more
+                  companies have been using their websites as a primary source
+                  of traffic since COVID-19), and so consequently convention
+                  will change as well (Mailloux, 1983: 404). Conventions are
+                  tools that can help us as designers to create intuitive
+                  digital experiences for others.
+                </p>
+                <p>
+                  <strong
+                    >Supplementary material and why I think it's useful:</strong
+                  >
+                  I usually find that having multiple perspectives of the same
+                  work is beneficial. This course is no exception to that. I
+                  find that, if in the technical lectures, if there are concepts
+                  that I do not understand, it is sometimes worth going through
+                  the corresponding supplementary material. When an unfamiliar
+                  concept is given a fresh explanation, I find that I am more
+                  likely to absorb it the second time around. Although it is
+                  slightly more time consuming to approach understanding some
+                  topics in this way, I find that it is worth it in the end
+                  because my understanding of the topics on a whole is generally
+                  better.
+                </p>
+              </article>
+              <label for="WkThree" class="expandBtn" id="weekThreeLabel"
+                >Toggle</label
+              >
+            </article>
+            <article>
+              <h3>Week 4</h3>
               <input type="checkbox" id="WkFour" class="check" />
               <p>This is the descripion</p>
-              <div class="weeks" id="weekFourth">
-                <p>This is the descripion</p>
-              </div>
-              <label for="WkFour" class="expandBtn">cheese </label>
-            </div>
-            <div>
-              <h2>Week 7</h2>
+              <article class="weeks" id="weekFourth">
+                <p>
+                  <strong>Website progress:</strong> My website has seen some
+                  development this week, following last week's introduction to
+                  UI and UX. I have a fairly confident idea of how I want some
+                  parts of it to look, but other parts are still relatively
+                  undefined. I have put some work into developing the home
+                  screen of my website, from my wireframe. Most of this work,
+                  however, I have used as an opportunity for me to get more
+                  familiar with CSS and using proper semantic markup with HTML.
+                  I've found that it is quite difficult to achieve “neat” CSS,
+                  perhaps someone has some advice that I may not know of to make
+                  my CSS look a bit neater?
+                </p>
+                <p>
+                  <strong> Reading vs Wireframe:</strong> This week’s reading
+                  contained some tips to create a more effective user interface.
+                  One of the tips involves being aware of who the audience of
+                  the website will be (Uxpin 2020: 1). The purpose of our
+                  website, is to act as a portfolio for us to showcase
+                  ourselves, and thus it is safe to assume that our target
+                  audiences would consist of potential employers. It also struck
+                  me as useful to read that it shouldn’t take more than 3 clicks
+                  to find information (Uxpin 2020: 4).
+                </p>
+                <p>
+                  I can say that I was aware of some of the principles mentioned
+                  in the reading, but not as many of them as I would have liked
+                  to. I took the opportunity to try to review some portfolio
+                  websites to see how some if some of the tips have been
+                  followed.
+                </p>
+                <p>
+                  <strong>UI and Interactivity:</strong> The interface of our
+                  website will be the factor that combines UI with interactivity
+                  for our website. Thus it is important that the interface is
+                  built in such a way that it is effective. We can use methods
+                  of UI design such as giving the user feedback, to know that
+                  their interaction with the website is acknowledged by the
+                  website (Uxpin 2020: 4).
+                </p>
+              </article>
+              <label for="WkFour" class="expandBtn" id="weekFourLabel"
+                >cheese
+              </label>
+            </article>
+            <article>
+              <h3>Week 7</h3>
               <input type="checkbox" id="WkSeven" class="check" />
               <p>This is the descripion</p>
-              <div class="weeks" id="weekSeventh">
-                <p>This is the descripion</p>
-              </div>
-              <label for="WkSeven" class="expandBtn">cheese </label>
-            </div>
+              <article class="weeks" id="weekSeventh">
+                <p>
+                  <strong>Website development:</strong> I have been taking the
+                  extended project brief into consideration with the continued
+                  development of my website. This process has forced me to
+                  reconsider the design of some sections of my website. In an
+                  effort to clean things up, I have decided to combine some
+                  sections (for the sake of reducing the number of options that
+                  the user is faced with at a time). This has forced me to
+                  rethink the flow of the website, and change my wireframes
+                  accordingly. Thankfully the actual implementation of my
+                  website is still fairly barebones, so it should not be a great
+                  effort to implement the changes I am wanting to make. Since
+                  the first assignment has little to no emphasis on aspects of
+                  JavaScript, I have prioritized becoming more confident in HTML
+                  and CSS. I attempted the DOM manipulation exercises, and
+                  although I found them challenging I am not worried at this
+                  stage, as I plan to find the time later on to sharpen these
+                  skills.
+                </p>
+                <p>
+                  <strong>IxD process lecture:</strong> I have taken the flow of
+                  my website into consideration. I intend to have a header that
+                  stays permanently visible (in desktop mode, at least), as a
+                  means for easy navigation for the user. I am attempting to
+                  make each of my pages internally familiar, as this will help
+                  the user to get used to the format of my website quickly, and
+                  I will use external familiarity elements so that the user is
+                  given a seamless experience when viewing my website for the
+                  first time.
+                </p>
+                <p>
+                  We want the users of our website to think about the decisions
+                  they are making as little as possible, hence the importance of
+                  Hick’s Law. I have been trying to find ways to condense the
+                  number of decisions that the user can be faced with at one
+                  time. In terms of navigation, I have taken this into account
+                  by combining similar sections together. This has been done so
+                  that initial navigation is less intimidating, and the user is
+                  able to increase the specificity of their navigation as they
+                  need to.
+                </p>
+                <p>
+                  I intend to use emphasis and dominance to show the user
+                  information that they have selected. This will be seen, on the
+                  header giving the user a visual indication of which page of
+                  the website they are currently on, and on the page in general
+                  if they are hovering over/close to something that they can
+                  interact with. I will change size and shape, to effectively
+                  communicate potential and completed actions.
+                </p>
+                <p>
+                  <strong>Weekly reading reflection:</strong> We cannot design
+                  in a way that expects the audience to achieve the exact same
+                  experience through our design, but we can design in a way that
+                  ensures that the audience can use the design to arrive at an
+                  individual experience (Hassenzahl & Tractinksy 2006: 95). UX
+                  takes the experience of the user into account while HCI is
+                  primarily focused on the functionality of the interface. As we
+                  take into account the UX aspects of our websites, it is
+                  important to consider both the ease of use and effectiveness
+                  of our website, as well as the experiences for the user that
+                  come as a consequence of engaging with our website.
+                </p>
+              </article>
+              <label for="WkSeven" class="expandBtn" id="weekSevenLabel">
+                Toggle
+              </label>
+            </article>
           </li>
         </ul>
-      </div>
+      </section>
       <section id="extraResearch">
+        <h2>Additional Research</h2>
         <ul>
           <li>
-            <article></article>
-            <article></article>
-            <article></article>
+            <article class="general-border">
+              <ul>
+                <li>
+                  <article>Chese</article>
+                  <article>piaz</article>
+                  <article>bujtt</article>
+                </li>
+              </ul>
+            </article>
           </li>
         </ul>
       </section>

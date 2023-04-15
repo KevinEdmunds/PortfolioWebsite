@@ -8,13 +8,23 @@ main{
 h1{
     font-size: 60px;
     text-align: center;
-    font-style: italic;
+    /*font-style: italic;*/
     width: 500px;
-    padding: -20px;
+    /*padding: -20px;*/
     text-shadow: 3px 3px rgba(255, 255, 255, 0.319);
 }
 h1 p{
     text-align: left;    
+}
+h3{
+    font-size: 25x;
+    text-decoration: underline;
+    text-align: center;
+}
+h2{
+    font-size: 40px;
+    text-align: center;
+    text-shadow: 3px 3px rgba(255, 255, 255, 0.319);
 }
 #greeting{/*On the home page, smaller text underneath first part of h1*/
     font-size: 36px;
@@ -22,12 +32,19 @@ h1 p{
 .weeks{/*for the expanded weekly dev blog paragraphs (all of them grouped together) */
     display: none;
 }
+.weeks p{
+    padding: 20px;
+    padding-bottom: 1px;
+}
+.weeks strong{
+    font-size: 20px;
+}
 .weeks:target
 {
     display: block;
 }
-.WeeklyContent ul li div{ /*containers for weekly dev blogs. .weeklyDevBlogs is the section of the page that shows the weekly dev blog section in its entirety*/
-    width: 60%;
+.WeeklyContent ul li article{ /*containers for weekly dev blogs. .weeklyDevBlogs is the section of the page that shows the weekly dev blog section in its entirety*/
+    width: 70%;
     margin: 0 auto;
     margin-top: 30px;
     padding: 15px;
@@ -40,14 +57,17 @@ h1 p{
 .WeeklyContent ul li{
     list-style: none;
 }
-.WeeklyContent>ul>li>div{
+.WeeklyContent>ul>li>article{
     padding-bottom: 50px;
 }
-.WeeklyContent ul li div h2{
+.WeeklyContent ul li article h2{
     text-align: center;
 }
 .check{/*checkbox class - checkboxes hidden*/
     display: none;
+}
+.WeeklyContent{
+    padding-top: 30px;
 }
 #WkOne:checked ~ #weekfirst{/*week x dev blog content expanded*/
     display: block;
@@ -55,17 +75,48 @@ h1 p{
 #WkOne:checked ~ #weekOneLabel{
     background-color: rgba(255, 99, 71, 1);
 }
-#WkOne:not(:checked) ~ #weekfirst{
-    display: none;
+.portfolioObject:hover{
+    background-color: rgb(230, 136, 22);
 }
+/*#WkOne:not(:checked) ~ #weekfirst{
+    display: none;
+}*/
 #WkTwo:checked ~ #weekSecond{
     display: block;
 }
 #WkTwo:checked ~ #weekTwoLabel{
     background-color: rgba(255, 99, 71, 1);
 }
-#WkTwo:not(:checked) ~ #weekSecond{
+/*#WkTwo:not(:checked) ~ #weekSecond{
     display: none;
+}*/
+#WkThree:checked ~ #weekThird{
+    display: block;
+}
+#WkThree:checked ~ #weekThreeLabel{
+    background-color: rgba(255, 99, 71, 1);
+}
+#WkFour:checked ~ #weekFourth{
+    display: block;
+}
+#WkFour:checked ~ #weekFourLabel{
+    background-color: rgba(255, 99, 71, 1);
+}
+#WkSeven:checked ~ #weekSeventh{
+    display: block;
+}
+#WkSeven:checked ~ #weekSevenLabel{
+    background-color: rgba(255, 99, 71, 1);
+}
+/*label:hover{
+    box-shadow: 0px -1px 24px 0px rgb(255, 255, 255);
+    -webkit-box-shadow: 0px -1px 24px 0px rgb(255, 255, 255)   ;
+    -moz-box-shadow: 0px -1px 24px 0px rgb(255, 255, 255);
+}*/
+label:not(.image):hover{
+    box-shadow: 0px -1px 24px 0px rgb(255, 255, 255);
+    -webkit-box-shadow: 0px -1px 24px 0px rgb(255, 255, 255)   ;
+    -moz-box-shadow: 0px -1px 24px 0px rgb(255, 255, 255);
 }
 .expandBtn{/*label corresponding to checkbox - click to expand/collapse weekly dev blog paragraphs*/
     float: right;
@@ -77,10 +128,14 @@ h1 p{
     padding: 10px;
     border-radius: 7px;
     cursor: pointer;
+    box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
 }
 #aboutMeButton{
     background-color: beige;
     color: black;
+    text-decoration: none;
 }
 .introText{/*Home page text underneath header*/
     margin: 0 auto;
@@ -97,6 +152,10 @@ h1 p{
     text-align: center;
     margin: 0 auto;
     padding: 80px;
+    padding-bottom: 100px;
+}
+#essay{
+    padding-bottom: 0px;
 }
 #WDBandAW{ /*WDB subheadings to switch between WDB and Additional research*/
     margin: 0 auto;
@@ -117,16 +176,28 @@ h1 p{
 #AR:checked ~ #WDBandAW>#arSelected{
     background-color: rgba(245, 245, 220, 1);
 }
+#AR:checked ~ #extraResearch{
+    display: block;
+}
+#AR:not(:checked) ~ #extraResearch{
+    display: none;
+}
 .pageToggle{
     margin: 50px;
     margin-bottom: 100px;
-    padding: 15px;
-    font-size: 25px;
+    padding: 30px;
+    font-size: 2page5px;
     text-decoration: none;
     color: black;
     font-style: italic;
     background-color: rgb(255, 99, 71, 1);
     border-radius: 7px; 
+    font-size: 25px;
+
+}.pageToggle:hover{
+    cursor: pointer;
+}
+label:hover{
     cursor: pointer;
 }
 .introText > a{
@@ -153,13 +224,25 @@ img{/*profile pictures*/
     justify-content: center;
 }
 .general-border{
-    background-color: rgba(245, 245, 220, 1);
-    /*text-align: center;*/
-    width: 600px;
+    width: 70%;
     margin: 0 auto;
-    border-radius: 7px;
+    margin-top: 30px;
+    padding: 15px;
+    margin-bottom: 30px;
+    background-color: rgba(245, 245, 220, 1);
+    border-radius: 10px;
     box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
-    padding: 30px;
+-webkit-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
+}
+li{
+    text-decoration: none;
+    list-style: none;
+}
+.general-border.narrower{
+    width: 60%;
+    display: none;
+}
+.container.portfolio{
+    margin-bottom: 80px;
 }
