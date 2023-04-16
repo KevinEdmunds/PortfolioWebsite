@@ -108,6 +108,18 @@ h2{
 #WkFour:checked ~ #weekFourLabel{
     background-color: rgba(255, 99, 71, 1);
 }
+#WkFive:checked ~ #weekFifth{
+    display: block;
+}
+#WkFive:checked ~ #weekFiveLabel{
+    background-color: rgba(255, 99, 71, 1);
+}
+#WkSix:checked ~ #weekSixth{
+    display: block;
+}
+#WkSix:checked ~ #weekSixLabel{
+    background-color: rgba(255, 99, 71, 1);
+}
 #WkSeven:checked ~ #weekSeventh{
     display: block;
 }
