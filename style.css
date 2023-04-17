@@ -54,10 +54,17 @@ h2{
 -webkit-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
 }
+
 .WeeklyContent ul li{
     list-style: none;
 }
+.extraResearch ul li{
+    list-style: none;
+}
 .WeeklyContent>ul>li>article{
+    padding-bottom: 50px;
+}
+.extraResearch>ul>li>article{
     padding-bottom: 50px;
 }
 .WeeklyContent ul li article h2{
@@ -75,14 +82,18 @@ h2{
 #WkOne:checked ~ #weekOneLabel{
     background-color: rgba(255, 99, 71, 1);
 }
-.portfolioObject:hover{
-    background-color: rgb(230, 136, 22);
-}
 .portfolioObject{
     border-radius: 10px;
     width: 80%;
+    /*padding-top: 30px;*/ 
     margin: 0 auto;
     display: block;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
 }
 /*#WkOne:not(:checked) ~ #weekfirst{
     display: none;
@@ -126,6 +137,12 @@ h2{
 #WkSeven:checked ~ #weekSevenLabel{
     background-color: rgba(255, 99, 71, 1);
 }
+#AROne:Checked ~ #ARFirst{
+    display: block;
+}
+#AROne:Checked ~ #ARLABEL{
+    background-color: rgba(255, 99, 71, 1);
+}
 /*label:hover{
     box-shadow: 0px -1px 24px 0px rgb(255, 255, 255);
     -webkit-box-shadow: 0px -1px 24px 0px rgb(255, 255, 255)   ;
@@ -136,6 +153,9 @@ label:not(.image):hover{
     box-shadow: 0px -1px 24px 0px rgb(255, 255, 255);
     -webkit-box-shadow: 0px -1px 24px 0px rgb(255, 255, 255)   ;
     -moz-box-shadow: 0px -1px 24px 0px rgb(255, 255, 255);
+}
+.hide{
+    display: none   ;
 }
 .expandBtn{/*label corresponding to checkbox - click to expand/collapse weekly dev blog paragraphs*/
     float: right;
@@ -150,6 +170,33 @@ label:not(.image):hover{
     box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
+}
+#Wireframe:Checked ~ #wire{
+    display: block;
+}
+#Wireframe:not(:checked) ~ #wire{
+    display: none;
+}
+#Wireframe:not(:checked) ~ #WDBandAW>#wireframeSelected{
+    background-color: beige;
+}
+#IxD:checked ~ #ixdl{
+    display: block;
+}
+#IxD:not(:checked) ~ #WDBandAW>#ixdSelected{
+    background-color: beige;
+}
+#Style:checked ~ #styl{
+    display: block;
+}
+#Style:not(:checked) ~ #WDBandAW>#styleSelected{
+    background-color: beige;
+}
+#Imp:checked ~ #impl{
+    display: block;
+}
+#Imp:not(:checked) ~ #WDBandAW>#impSelected{
+    background-color: beige;
 }
 #aboutMeButton{
     background-color: beige;
@@ -198,8 +245,15 @@ label:not(.image):hover{
 #AR:checked ~ #extraResearch{
     display: block;
 }
+#styleguide{
+    width: 90%;
+}
 #AR:not(:checked) ~ #extraResearch{
     display: none;
+}
+#palette
+{
+    width: 40%;
 }
 .pageToggle{
     margin: 50px;
@@ -234,6 +288,18 @@ label:hover{
 .DisplayPic{/*profile pictures*/
     border-radius: 30%;
     margin: 0 30px;
+    width: 350px;
+    height: 350px;
+    box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
+}
+#AboutMe{
+    width: 200px;
+    height: 200px;
+    border-radius: 30%;
+    margin: 15px;
+    border-radius: 10px;
     box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
 -webkit-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
@@ -247,12 +313,12 @@ label:hover{
     margin: 0 auto;
     margin-top: 30px;
     padding: 15px;
-    margin-bottom: 30px;
     background-color: rgba(245, 245, 220, 1);
     border-radius: 10px;
     box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
 -webkit-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
+
 }
 li{
     text-decoration: none;
@@ -280,7 +346,7 @@ header{
 body{
     margin: 0;
     padding: 0;
-    background-color:rgb(206, 206, 206);
+    background-color:rgb(125, 125, 125);
 }
 
 header nav ul li{
@@ -339,7 +405,11 @@ header nav ul li #logo a{
     header nav ul li{
         float: none;
         display: inline-block;
-        background-color: red;
+        width: 80%;
+        padding-bottom: 50px;
+    }
+    header nav ul li a{
+        padding: 100px;
     }
     header nav ul{
         position:fixed ;
@@ -351,6 +421,8 @@ header nav ul li #logo a{
         list-style: none;
         margin: 0;
         padding: 0;
+       /* left: -120%;*/
+        transition: all 1s;
     }
     .headerOption{
         display: block;

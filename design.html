@@ -11,7 +11,9 @@
   <body>
     <header>
       <nav id="header">
+        <input type="checkbox" name="" class="check" id="checkbox" />
         <a href="./index.html" id="logo">Kevin's Portfolio Site</a>
+        <label for="checkbox" class="check">Navigation</label>
         <ul>
           <li>
             <a id="./home" href="index.html" class="headerOption">Home</a>
@@ -24,37 +26,240 @@
       </nav>
     </header>
     <main>
+      <input type="checkbox" id="Wireframe" class="check" />
+      <input type="checkbox" id="IxD" class="check" />
+      <input type="checkbox" id="Imp" class="check" />
+      <input type="checkbox" id="Style" class="check" />
+
       <section><h1 class="writing">Design Section</h1></section>
-      <section class="general-border">
+      <section id="WDBandAW">
+        <label for="Wireframe" class="pageToggle" id="wireframeSelected"
+          >Wireframe</label
+        >
+        <label for="IxD" class="pageToggle" id="ixdSelected">IxD Process</label
+        ><label for="Style" class="pageToggle" id="styleSelected"
+          >Style Guide</label
+        ><label for="Imp" class="pageToggle" id="impSelected"
+          >Implementation Notes</label
+        >
+      </section>
+      <section id="wire" c>
         <h2>Wireframes</h2>
-        <h3>First Wireframe</h3>
-
-        <section class="container portfolio">
+        <section class="general-border">
+          <h3>First Wireframe</h3>
+          <article class="general-border">
+            <p>
+              This is the first wireframe that I made, shortly after we were
+              introduced to the concept of wireframing in class. The assignment
+              brief had not been released, and so I was unsure of the sections
+              that we would need later on. I decided to implement my website as
+              one long page that the user would scroll through/use buttons to
+              navigate through. There are lots of things that I have decided to
+              change since this wireframe.
+            </p>
+          </article>
           <img src="./Images/Wireframe_1.jpg" alt="" class="portfolioObject" />
-        </section>
-        <h3>(Mostly) Current Wireframe</h3>
-        <section class="container portfolio">
-          <img
-            src="./Images/Current_Wireframe.jpg"
-            alt=""
-            class="portfolioObject"
-          />
-        </section>
-      </section>
+          <h3>(Mostly) Current Wireframe</h3>
+          <article class="general-border">
+            <p>
+              This is my most recent wireframing. Since the first wireframe, I
+              have decided to break my website up into pages, which contain
+              information in smaller more digestible chunks. One of the reasons
+              that I did this, was because I was worried that due to the amount
+              of information we need to present, things would overwhelming to a
+              user very quickly. This can also be seen in the way I have chosen
+              to present information within the pages of my site. For each
+              subsection, there is a toggleable feature, that allows the user to
+              hide information that they do not currently want to see. This also
+              helps with navigating within the pages because the user is able to
+              see quick descriptions of the information before they can choose
+              whether or not they want to view it.
+            </p>
+          </article>
 
-      <section class="general-border">
-        <h2>IxD Process</h2>
-        <img src="./Images/User Flow.png" alt="" class="portfolioObject" />
+          <section class="container portfolio">
+            <img
+              src="./Images/Current_Wireframe.jpg"
+              alt=""
+              class="portfolioObject"
+            />
+          </section>
+        </section>
       </section>
-      <section class="general-border">
+      <section id="ixdl" class="hide">
+        <h2>IxD Process</h2>
+        <section class="general-border">
+          <h3>Goal Alignment</h3>
+          <article class="general-border">
+            <p>
+              This website is primarily a personal portfolio for myself. I want
+              this website to showcase my personality as well as my technical
+              skills, as well as my development process and growth as a
+              developer.
+            </p>
+            <p>
+              User: (Ideally)-Potential employers who want to see a showcase of
+              my work and my skills. They will be on my website to see if I am
+              eligible
+            </p>
+            <p>
+              (Realistically)-The lecturers/tutors involved in this course who
+              want to see how I’ve built my website, the thought process behind
+              the design elements, and my ability to reflect and engage with the
+              course material
+            </p>
+            <p>
+              Content: A portfolio of my work, as well as a brief description of
+              who I am. Additionally, content showing my growth as a developer,
+              my ability to think critically and my engage with the course work
+            </p>
+          </article>
+          <h3>Information Structure and Content Mapping</h3>
+          <article class="general-border">
+            <p>
+              I have decided to implement the Weekly Dev Blogs with my
+              Additional Research in the “Blog” page. This is because they are
+              similar sections, in that they are predominantly a reflection of
+              some relevant work and how I can use the knowledge I have gained
+              from it to contribute to my success in this course.
+            </p>
+            <p>
+              I decided that it was a good idea to add a personal “About me”
+              section on the same page as my Portfolio in my About page, as
+              these sections are related to my personal growth, and are things
+              that someone who wants to find things out about me quickly.
+            </p>
+            <p></p>
+          </article>
+          <h3>User Flow</h3>
+          <article class="general-border">
+            <img src="./Images/User Flow.png" alt="" class="portfolioObject" />
+            <p>
+              I have taken Hick's Law into consideration, by creating a decision
+              heirarchy for the user to follow. By structuring the website in
+              this way, the user is faced with fewer options in their choices,
+              which is less overwhelming and allows them to make faster
+              decisions. Within some of the web pages are toggles that allow the
+              user to expand or collapse lengthy paragraphs of text at their
+              command. Users interact with buttons on the header to navigate
+              between pages of information. I have also taken the number of
+              pages that I have made into consideration. All of the relevant
+              information pertaining to a particular page is contained within
+              that page (Instead of navigating the user with every decision that
+              they make). This have been done in order it make navigation less
+              intimidating, and make the information on a page more accessible
+              all of the time (for example, a user is able to open multiple
+              weekly dev blogs on the same page in order to better compare them)
+            </p>
+          </article>
+          <h3>Interface Elements Explanation</h3>
+          <article class="general-border">
+            <p>
+              The only input that the user needs to do is click buttons to move
+              between pages and toggle paragraphs of text. This is so that they
+              can choose which information they would like to see or not
+            </p>
+          </article>
+        </section>
+      </section>
+      <section id="styl" class="hide">
         <h2>Style Guide</h2>
         <section class="general-border">
-          <h3>Cheese</h3>
+          <h3>Visual and Design Elements Selected</h3>
+          <section class="general-border">
+            <strong>Colours: </strong> The following colour palette has been
+            used. Navy blue is a classic colour that conveys feelings of
+            professional and reliability. It is also a trustworthy colour that
+            many corporate brands use in their colour palettes. Orange is a
+            vibrant colour that evokes energy, and compliments navy blue in a
+            way that makes them exciting to look at together. Beige is neutral,
+            and evokes a sense of calmness, and coziness. This will help to
+            convey a sense of comfort and familiarity for the user while
+            navigating the website. Black is a bold colour that will primarily
+            be used for text, as it contrasts effectively with beige.
+            <img
+              src="./Images/colourPalette.png"
+              alt=""
+              class="portfolioObject"
+              id="palette"
+            />
+          </section>
+          <section class="general-border">
+            <p>
+              <strong>Font:</strong>I have decided to use Tahoma as the font for
+              my website. This font is professional looking, and is easy on the
+              eye and is legible. I like the font because it
+            </p>
+          </section>
+          <section class="general-border">
+            <p>
+              <strong>Composition:</strong>Most viewable information can be
+              hidden away through the buttons around the website. This is to
+              lessen visual clutter and give the user a less complicated
+              experience using the site.
+            </p>
+          </section>
+          <section class="general-border">
+            <p>
+              <strong>Interface elements:</strong> selected elements are orange
+              in colour. Unselected elements are beige in colour. all elements
+              have a shadow and a boarder radius so that the edges are not sharp
+            </p>
+          </section>
+          <h3>Final Style Guide</h3>
+          <section class="general-border">
+            <img
+              src="./Images/styleGuideFinalThing.png"
+              alt=""
+              class="portfolioObject"
+              id="styleguide"
+            />
+          </section>
         </section>
       </section>
-      <section class="general-border">
-        <h2>Future Plans?</h2>
-        <img src="https://picsum.photos/400" alt="" class="portfolioObject" />
+      <section id="impl" class="hide">
+        <h2>Implementation Notes</h2>
+        <section class="general-border">
+          <h3>JavaScript</h3>
+          <section class="general-border">
+            <p>
+              Although I have implemented used JavaScript into my website yet, I
+              can already see some important places that it’s functionality can
+              be utilized. For example I am happy with how my Weekly Dev Blog
+              section is working, but I know that using JavaScript would make it
+              easier to expand and include later Dev Blogs. At the moment,
+              although it is functional, it is much more of an effort to add
+              more information to that part of the site than it needs to be.
+            </p>
+          </section>
+          <h3>CSS</h3>
+          <section class="general-border">
+            I have made ample use of CSS for the styling and some basic
+            functionality of my website. I have made use of a single .css folder
+            (rather than using inline styles in my .html files), called
+            “style.css” which contains all of the styling elements that help to
+            make my website look the way it does. This has helped me save time
+            because I can use the classes I have made to define how I want some
+            HTML elements to look without having to give each individual element
+            styling when it needs it. In this way, I can say that my CSS code is
+            modular. I have done some responsive layout design, which makes my
+            website functional on a number of different screen sizes.
+          </section>
+          <h3>Semantic Markup</h3>
+          <section class="general-border">
+            All of the images are placed in a folder to reduce clutter. None of
+            my .html and .css files are placed in a file for ease of access.
+          </section>
+          <h3>Folder Structure</h3>
+          <section class="general-border">
+            I have attempted to follow proper semantic markup during the
+            development of my website. I have placed the header in the header
+            element in the body of my website, so that it can be utilized
+            properly. I have placed all of my content sections into articles and
+            sections depending on the type of content so that they can be
+            toggled effectively.
+          </section>
+        </section>
       </section>
     </main>
   </body>
