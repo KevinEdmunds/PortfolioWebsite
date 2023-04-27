@@ -242,13 +242,13 @@ label:not(.image):hover{
 #AR:checked ~ #WDBandAW>#arSelected{
     background-color: rgba(245, 245, 220, 1);
 }
-#AR:checked ~ #extraResearch{
+#AR:checked ~ .extraResearch{
     display: block;
 }
 #styleguide{
     width: 90%;
 }
-#AR:not(:checked) ~ #extraResearch{
+#AR:not(:checked) ~ .extraResearch{
     display: none;
 }
 #palette
