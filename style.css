@@ -312,6 +312,7 @@ label:hover{
     width: 70%;
     margin: 0 auto;
     margin-top: 30px;
+    margin-bottom: 50px;
     padding: 15px;
     background-color: rgba(245, 245, 220, 1);
     border-radius: 10px;
@@ -387,7 +388,7 @@ body{
 }
 header #logo{
     float: left;
-    margin-top: 4px;
+    margin-top: 6px;
     margin-left: 40px;
 }
 #logo{
@@ -402,31 +403,48 @@ header nav ul li #logo a{
     background-color: aquamarine;
 }
 
+.burgerButton{
+    width: 50px;
+    font-size: 25px;
+    float: right;
+    margin-right: 35px;
+    margin-top: 30px;
+    display: none;
+}
+
+#burgerButtonMenu:checked ~#headerNavSmall{
+    left: 0%;
+}
+
 @media (max-width:1125px){
+    .burgerButton{
+        display: block;
+    }
     header nav ul li{
         float: none;
         display: inline-block;
-        width: 80%;
+        width: 40%;
         padding-bottom: 50px;
+        padding-top: 50px;
     }
     header nav ul li a{
         padding: 100px;
     }
-    header nav ul{
+    #headerNavSmall{
         position:fixed ;
         width: 100%;
-        background-color: rgba(48, 48, 48, 0.395);
-        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.395);
+        height: 200vh;
         text-align: center;
-        top: 85px;
+        top: 100px;
         list-style: none;
         margin: 0;
         padding: 0;
-       /* left: -120%;*/
+        left: -120%;
         transition: all 1s;
     }
     .headerOption{
         display: block;
-        padding: 10px;
+        padding: 20px;
     }
 }

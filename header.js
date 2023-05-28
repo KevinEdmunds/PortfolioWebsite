@@ -1,9 +1,16 @@
 const body=document.body;
 const header=document.createElement("header");
 
-const headerInside=`<nav id="header">
+const headerInside=`      <nav id="header">
 <a href="./index.html" id="logo">Kevin's Portfolio Site</a>
-<ul>
+<input type="checkbox" name="" class="check" id="burgerButtonMenu" />
+<label for="burgerButtonMenu" class="burgerButton"
+  ><i
+    class="fa-solid fa-bars-staggered fa-rotate-180 fa-xl"
+    style="color: #ffffff"
+  ></i
+></label>
+<ul id="headerNavSmall">
   <li>
     <a id="./home" href="index.html" class="headerOption">Home</a>
     <a href="./writing.html" class="headerOption">Blogs</a>
