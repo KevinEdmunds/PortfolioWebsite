@@ -1,31 +1,35 @@
 var acc = document.getElementsByClassName("toggle");
-console.log(acc.length);
+let weeklyDevBlogs = [...wdb];
+console.log([weeklyDevBlogs[1]]);
+//console.log(acc.length);
 var i;
 
+
 for (i = 0; i < acc.length; i++) {
-  ClickButton(acc[i])
+  ClickButton(acc[i] , i)
   OnEnter(acc[i]);
   OnExit(acc[i]);
+
 }
 
-function ClickButton(btn)
+
+//assign eventlisteners for each button
+function ClickButton(btn, index)
   {
     let panel = btn.querySelector("article");
     btn.addEventListener("click", function(){
       this.classList.toggle("active");
       Clicked(panel, btn);
-      /*if (panel.style.display === "block") {
-        panel.style.display = "none";
-        btn.style.backgroundColor = "rgba(245,245,220,1)";
-      } else {
-        panel.style.display = "block";
-        btn.style.backgroundColor = "rgba(245,245,220,0.5)";
-      }*/
     })
   }
 
+  //assign mouseenter eventlistener
   function OnEnter(btn)
   {
+    if(!btn.classList.contains("hasDesc"))
+    {
+      return;
+    }
     let header=btn.querySelector("h3");
     let desc=btn.querySelector("p");
     btn.addEventListener("mouseenter", function(){
@@ -33,8 +37,14 @@ function ClickButton(btn)
       desc.style.display="block";
     })
   }
+
+  ////assign mouseleave eventlistener
   function OnExit(btn)
   {
+    if(!btn.classList.contains("hasDesc"))
+    {
+      return;
+    }
     let header=btn.querySelector("h3");
     let desc=btn.querySelector("p");
     btn.addEventListener("mouseleave", function(){
@@ -43,7 +53,9 @@ function ClickButton(btn)
     })
   }
 
+  //when a button gets clicked
   function Clicked(panel, btn){
+
     btn.classList.toggle("active");
     if (panel.style.display === "block") {
       panel.style.display = "none";
