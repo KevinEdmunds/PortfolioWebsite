@@ -35,6 +35,7 @@ h2{
 .weeks p{
     padding: 20px;
     padding-bottom: 1px;
+    text-align: left;
 }
 .weeks strong{
     font-size: 20px;
@@ -42,6 +43,9 @@ h2{
 .weeks:target
 {
     display: block;
+}
+.centered{
+    margin: 0 auto;
 }
 .WeeklyContent ul li article{ /*containers for weekly dev blogs. .weeklyDevBlogs is the section of the page that shows the weekly dev blog section in its entirety*/
     width: 70%;
@@ -53,6 +57,15 @@ h2{
     box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
 -webkit-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
+}
+ul li{
+    display: flex;
+    justify-content: center;
+}
+.desc{
+    left: 120%;
+    display: none;
+    transition: 0.5s;
 }
 
 .WeeklyContent ul li{
@@ -76,12 +89,7 @@ h2{
 .WeeklyContent{
     padding-top: 30px;
 }
-#WkOne:checked ~ #weekfirst{/*week x dev blog content expanded*/
-    display: block;
-}
-#WkOne:checked ~ #weekOneLabel{
-    background-color: rgba(255, 99, 71, 1);
-}
+
 .portfolioObject{
     border-radius: 10px;
     width: 80%;
@@ -95,81 +103,13 @@ h2{
 -webkit-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
 }
-/*#WkOne:not(:checked) ~ #weekfirst{
-    display: none;
-}*/
-#WkTwo:checked ~ #weekSecond{
-    display: block;
-}
-#WkTwo:checked ~ #weekTwoLabel{
-    background-color: rgba(255, 99, 71, 1);
-}
-/*#WkTwo:not(:checked) ~ #weekSecond{
-    display: none;
-}*/
-#WkThree:checked ~ #weekThird{
-    display: block;
-}
-#WkThree:checked ~ #weekThreeLabel{
-    background-color: rgba(255, 99, 71, 1);
-}
-#WkFour:checked ~ #weekFourth{
-    display: block;
-}
-#WkFour:checked ~ #weekFourLabel{
-    background-color: rgba(255, 99, 71, 1);
-}
-#WkFive:checked ~ #weekFifth{
-    display: block;
-}
-#WkFive:checked ~ #weekFiveLabel{
-    background-color: rgba(255, 99, 71, 1);
-}
-#WkSix:checked ~ #weekSixth{
-    display: block;
-}
-#WkSix:checked ~ #weekSixLabel{
-    background-color: rgba(255, 99, 71, 1);
-}
-#WkSeven:checked ~ #weekSeventh{
-    display: block;
-}
-#WkSeven:checked ~ #weekSevenLabel{
-    background-color: rgba(255, 99, 71, 1);
-}
-#AROne:Checked ~ #ARFirst{
-    display: block;
-}
-#AROne:Checked ~ #ARLABEL{
-    background-color: rgba(255, 99, 71, 1);
-}
-/*label:hover{
-    box-shadow: 0px -1px 24px 0px rgb(255, 255, 255);
-    -webkit-box-shadow: 0px -1px 24px 0px rgb(255, 255, 255)   ;
-    -moz-box-shadow: 0px -1px 24px 0px rgb(255, 255, 255);
-}*/
 
-label:not(.image) :not(.burgerButton):hover{
-    box-shadow: 0px -1px 24px 0px rgb(255, 255, 255);
-    -webkit-box-shadow: 0px -1px 24px 0px rgb(255, 255, 255)   ;
-    -moz-box-shadow: 0px -1px 24px 0px rgb(255, 255, 255);
-}
-.hide{
-    display: none   ;
-}
-.expandBtn{/*label corresponding to checkbox - click to expand/collapse weekly dev blog paragraphs*/
-    float: right;
-    text-align: center;
+button{
+    min-height: 100px;
     margin: 0 auto;
-    background-color: beige;
-    color: black;
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 7px;
+}
+button:hover{
     cursor: pointer;
-    box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
 }
 #Wireframe:Checked ~ #wire{
     display: block;
@@ -203,6 +143,46 @@ label:not(.image) :not(.burgerButton):hover{
     color: black;
     text-decoration: none;
 }
+
+#WeekDev:not(:checked) ~ #WDBandAW>#wdbSelected{
+    background-color: rgba(245, 245, 220, 1);
+}
+#AR:checked ~ #WDBandAW>#arSelected{
+    background-color: rgba(245, 245, 220, 1);
+}
+#AR:checked ~ .extraResearch{
+    display: block;
+}
+#WeekDev:checked ~ .WeeklyContent{
+    display: none;
+}
+#WeekDev:not(:checked) ~ .WeeklyContent{
+    display: block;
+}
+label:not(.image) :not(.burgerButton):hover{
+    box-shadow: 0px -1px 24px 0px rgb(255, 255, 255);
+    -webkit-box-shadow: 0px -1px 24px 0px rgb(255, 255, 255)   ;
+    -moz-box-shadow: 0px -1px 24px 0px rgb(255, 255, 255);
+}
+.hide{
+    display: none   ;
+}
+.expandBtn{/*label corresponding to checkbox - click to expand/collapse weekly dev blog paragraphs*/
+    float: right;
+    text-align: center;
+    margin: 0 auto;
+    background-color: beige;
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 7px;
+    cursor: pointer;
+    box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
+}
+
+.pageToggle :hover ~ 
 .introText{/*Home page text underneath header*/
     margin: 0 auto;
     margin-top: 30px;
@@ -227,24 +207,11 @@ label:not(.image) :not(.burgerButton):hover{
     margin: 0 auto;
     text-align: center;
 }
-#WeekDev:checked ~ .WeeklyContent{
-    display: none;
-}
-#WeekDev:not(:checked) ~ .WeeklyContent{
-    display: block;
-}
+
 .WeeklyContent{
     display: block;
 }
-#WeekDev:not(:checked) ~ #WDBandAW>#wdbSelected{
-    background-color: rgba(245, 245, 220, 1);
-}
-#AR:checked ~ #WDBandAW>#arSelected{
-    background-color: rgba(245, 245, 220, 1);
-}
-#AR:checked ~ .extraResearch{
-    display: block;
-}
+
 #styleguide{
     width: 90%;
 }
@@ -326,7 +293,7 @@ li{
     list-style: none;
 }
 .general-border.narrower{
-    width: 60%;
+    width: 60%;                                                                     /*chese*/
     display: none;
 }
 .container.portfolio{
