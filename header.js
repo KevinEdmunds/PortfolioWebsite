@@ -1,11 +1,13 @@
+//Displaying the header with JavaScript
+
 const body=document.body;
 const header=document.createElement("header");
 
-const headerInside=`      <nav id="header">
+const headerInside=`            <nav id="header">
 <a href="./index.html" id="logo">Kevin's Portfolio Site</a>
 <input type="checkbox" name="" class="check" id="burgerButtonMenu" />
 <label for="burgerButtonMenu" class="burgerButton"
-  ><img src="burgetbutton.png" alt=""
+  ><img src="./Images/burgetbutton.png" alt=""
 /></label>
 <ul id="headerNavSmall">
   <li>
