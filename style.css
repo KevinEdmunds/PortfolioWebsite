@@ -119,19 +119,26 @@ button:hover{
     -moz-box-shadow: 0px -1px 24px 0px rgb(255, 255, 255);
     transition: 0.3s;
 }
-#Wireframe:Checked ~ #wire{
+#assignmentOne:Checked ~ #assignmentOneDesign{
     display: block;
 }
-#Wireframe:not(:checked) ~ #wire{
+#assignmentOne:not(:checked) ~ #assignmentOneDesign{
     display: none;
 }
-#Wireframe:not(:checked) ~ #WDBandAW>#wireframeSelected{
-    background-color: beige;
+#assignmentOne:checked ~ #WDBandAW>#WDBandAW>#assignmentOneSelected{
+    background-color: rgba(245, 245, 220, 0.516);
 }
-#IxD:checked ~ #ixdl{
+#assignmentThree:checked ~ #assignmentThreeDesign{
     display: block;
 }
-#IxD:not(:checked) ~ #WDBandAW>#ixdSelected{
+#assignmentThree:not(:checked) ~ #assignmentThreeDesign{
+    display: none;
+}
+#assignmentThree:checked ~ #WDBandAW>#WDBandAW>#assignmentThreeSelected{
+    
+    background-color: rgba(245, 245, 220, 0.516);
+}
+/*#IxD:not(:checked) ~ #WDBandAW>#ixdSelected{
     background-color: beige;
 }
 #Style:checked ~ #styl{
@@ -145,7 +152,7 @@ button:hover{
 }
 #Imp:not(:checked) ~ #WDBandAW>#impSelected{
     background-color: beige;
-}
+}*/
 #aboutMeButton{
     background-color: beige;
     color: black;
@@ -153,10 +160,10 @@ button:hover{
 }
 
 #WeekDev:not(:checked) ~ #WDBandAW>#wdbSelected{
-    background-color: rgba(245, 245, 220, 1);
+    background-color: rgba(245, 245, 220, 0.516);
 }
 #AR:checked ~ #WDBandAW>#arSelected{
-    background-color: rgba(245, 245, 220, 1);
+    background-color: rgba(245, 245, 220, 0.516);
 }
 #AR:checked ~ .extraResearch{
     display: block;
@@ -190,7 +197,13 @@ label:not(.image) :not(.burgerButton):hover{
     -moz-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
 }
 
-.pageToggle :hover ~ 
+.pageToggle :hover{
+    cursor: pointer;
+    box-shadow: 0px -1px 24px 0px rgb(255, 255, 255);
+    -webkit-box-shadow: 0px -1px 24px 0px rgb(255, 255, 255)   ;
+    -moz-box-shadow: 0px -1px 24px 0px rgb(255, 255, 255);
+    transition: 0.3s;
+}
 .introText{/*Home page text underneath header*/
     margin: 0 auto;
     margin-top: 30px;
@@ -212,8 +225,15 @@ label:not(.image) :not(.burgerButton):hover{
     padding-bottom: 0px;
 }
 #WDBandAW{ /*WDB subheadings to switch between WDB and Additional research*/
+    width: 60%;
     margin: 0 auto;
+    display: flex;
+    grid-template-columns: repeat(4, 1fr);
+    /*border: solid black;*/
+    align-items: center; 
+    justify-content: center;
     text-align: center;
+    place-content: center;  
 }
 
 .WeeklyContent{
@@ -238,12 +258,10 @@ label:not(.image) :not(.burgerButton):hover{
     text-decoration: none;
     color: black;
     font-style: italic;
-    background-color: rgba(255, 99, 71, 0.473);
+    background-color: beige;
     border-radius: 7px; 
     font-size: 25px;
 
-}.pageToggle:hover{
-    cursor: pointer;
 }
 label:hover{
     cursor: pointer;
@@ -393,6 +411,9 @@ header nav ul li #logo a{
 }
 
 @media (max-width:1125px){
+    #WDBandAW{ /*WDB subheadings to switch between WDB and Additional research*/
+        grid-template-columns: repeat(2, 1fr);
+    }
     .burgerButton{
         display: block;
     }
