@@ -1,11 +1,21 @@
-
+let weeklyDevBlogs
 let acc = document.getElementsByClassName("toggle");
+let weeklyDevBlogButtons = document.getElementsByClassName("wdbButton");
+//console.log(weeklyDevBlogButtons)
+if(!weeklyDevBlogButtons.length==0)
+{
+  weeklyDevBlogs = [...wdb];  
+  console.log("weeklydevblog");
+}
 
 /*let btns = document.querySelectorAll("button");*/
-console.log(acc);
-/*console.log(btns);*/
-let weeklyDevBlogs = [...wdb];
+//console.log(acc);
+///*console.log(btns);*/
+
 let i;
+console.log(acc[1]);
+console.log(i);
+console.log(weeklyDevBlogs)
 
 for (i = 0; i < acc.length; i++) {
   if(acc[i].classList.contains("wdbButton"))
@@ -26,16 +36,12 @@ ClearEmptyParagraphs();
 
 function ClearEmptyParagraphs()
 {
-  console.log("function called");
   let paragraphs=document.querySelectorAll("p");
-  console.log(paragraphs);
   let k;
   for(k=0; k<paragraphs.length; k++)
   {
-    console.log("chec");
     if(paragraphs[k].textContent==="")
     {
-      console.log("this should be empty");
       paragraphs[k].style.display="none";
     }
   }
