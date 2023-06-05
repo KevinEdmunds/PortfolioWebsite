@@ -1,17 +1,63 @@
-var acc = document.getElementsByClassName("toggle");
-let weeklyDevBlogs = [...wdb];
-console.log([weeklyDevBlogs[1]]);
-//console.log(acc.length);
-var i;
 
+let acc = document.getElementsByClassName("toggle");
+let acsc = document.querySelectorAll("button");
+let weeklyDevBlogs = [...wdb];
+let i;
 
 for (i = 0; i < acc.length; i++) {
+  if(acc[i].classList.contains("wdbButton"))
+  {
+    FetchWDBContent(acc[i], i, weeklyDevBlogs)
+  }
+ 
   ClickButton(acc[i] , i)
   OnEnter(acc[i]);
   OnExit(acc[i]);
-
 }
 
+//fetching the corresponding WDB content for WDB buttons.
+//This functin looks long but it only does 4 things
+//1-creates an article section which is a child of the button
+//2-assigns the information from the wdb*-**-
+ function FetchWDBContent(btn, i, weeklyDevBlogs)
+ {
+  let panel=CreateWDBArticle(btn);
+  let {headingOne,
+  oneParagraphOne,
+  oneParagraphTwo,
+  oneParagraphThree,
+  headingTwo,
+  twoParagraphOne,
+  twoParagraphTwo,
+  twoParagraphThree,
+  headingThree,
+  threeParagraphOne,
+  threeParagraphTwo,
+  threeParagraphThree,
+  references,
+  referenceOne,
+  referenceTwo,} = weeklyDevBlogs[i];
+ panel.innerHTML=`
+  <p><strong>${headingOne}</strong>${oneParagraphOne}</p>
+  <p>${oneParagraphTwo}</p>
+  <p>${oneParagraphThree}</p>
+  <p><strong>${headingTwo}</strong>${twoParagraphOne}</p>
+  <p>${twoParagraphTwo}</p>
+  <p>${twoParagraphThree}</p>
+  <p><strong>${headingThree}</strong>${threeParagraphOne}</p>
+  <p>${threeParagraphTwo}</p>
+  <p>${threeParagraphThree}</p>
+  <strong>References: </strong>
+  <p>${referenceOne}</p>
+  <p>${referenceTwo}</p>`;
+ }
+
+ function CreateWDBArticle(btn){
+  let panel=document.createElement("article")
+  btn.appendChild(panel);
+  panel.classList.add("weeks");
+  return panel;
+ }
 
 //assign eventlisteners for each button
 function ClickButton(btn, index)
@@ -53,7 +99,7 @@ function ClickButton(btn, index)
     })
   }
 
-  //when a button gets clicked
+  //click event listener options
   function Clicked(panel, btn){
 
     btn.classList.toggle("active");

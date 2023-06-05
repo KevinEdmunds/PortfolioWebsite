@@ -13,7 +13,7 @@ const wdb = [
       threeParagraphTwo:"",
       threeParagraphThree:"",
       references:"",
-      referenceOne:"",
+      referenceOne:"(This week had no references)",
       referenceTwo:"",
     },
     {
@@ -22,7 +22,7 @@ const wdb = [
       oneParagraphTwo:"",
       oneParagraphThree:"",
       headingTwo: "Reflection on Readings: ",
-      twoParagraphOne:"I completed the Bruce Larson reading, “Why you should Choose HTML5 article over section”. One thing that I found interesting from this reading (that was further emphasized in the technical lecture for the week), is the fact that, although two things might appear the same visually, if they are implemented in different ways, they can be functionally different. Examples include the <strong> and <b> tags, both of which make the text which they surround bold. Under the hood, however they function differently and can make differences in the discoverability and usability of my websites. Similarly, the reading also mentions that, wrapping an h1 element in a section element, can change the size of the h1 text. Visually, this is different, but functionally it is still the same. This would be a example of bad semantic markup.",
+      twoParagraphOne:"I completed the Bruce Larson reading, “Why you should Choose HTML5 article over section”. One thing that I found interesting from this reading (that was further emphasized in the technical lecture for the week), is the fact that, although two things might appear the same visually, if they are implemented in different ways, they can be functionally different. Examples include the  &lt;strong&gt and &lt;b&gt tags, both of which make the text which they surround bold. Under the hood, however they function differently and can make differences in the discoverability and usability of my websites. Similarly, the reading also mentions that, wrapping an h1 element in a section element, can change the size of the h1 text. Visually, this is different, but functionally it is still the same. This would be a example of bad semantic markup.",
       twoParagraphTwo:"I also watched the video “How A Screen Reader User Accesses The Web: A Smashing Video”. This was eye-opening to me, because I’ve never thought of the fact that some people have to access the internet in a non-visual way. It makes sense that screen readers exist, as a manner of including people who would struggle to use technology without tools to make it possible. This video highlights the importance of using HTML properly in order to make websites easily comprehendible for everyone, despite context that might only be relevant for some people to understand what is going on. A good example of this, as mentioned in the “Why you should Choose HTML5 article over section”, is the fact that there is a quick summary of the web page at the top of the page. Without context, the writing from the summary could flow into the body of writing, which could be confusing for someone who cannot see the visual divider separating the summary from the start of the article.",
       twoParagraphThree:"",
       headingThree: "Reflection on Internet Histories: ",
@@ -30,7 +30,7 @@ const wdb = [
       threeParagraphTwo:"",
       threeParagraphThree:"",
       references:"",
-      referenceOne:"",
+      referenceOne:"(This week had no references)",
       referenceTwo:"",
     },
     {
@@ -81,7 +81,7 @@ const wdb = [
       threeParagraphTwo:"",
       threeParagraphThree:"",
       references:"",
-      referenceOne:"",
+      referenceOne:"(This week had no references)",
       referenceTwo:"",
     },    
     {
@@ -98,7 +98,7 @@ const wdb = [
       threeParagraphTwo:"",
       threeParagraphThree:"",
       references:"",
-      referenceOne:"",
+      referenceOne:"(This week had no references)",
       referenceTwo:"",
     },    
     {
