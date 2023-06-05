@@ -1,13 +1,20 @@
 
 let acc = document.getElementsByClassName("toggle");
-let acsc = document.querySelectorAll("button");
+
+/*let btns = document.querySelectorAll("button");*/
+console.log(acc);
+/*console.log(btns);*/
 let weeklyDevBlogs = [...wdb];
 let i;
 
 for (i = 0; i < acc.length; i++) {
   if(acc[i].classList.contains("wdbButton"))
   {
-    FetchWDBContent(acc[i], i, weeklyDevBlogs)
+    FetchContent(acc[i], i, weeklyDevBlogs)
+  }else if(acc[i].classList.contains("arButton"))
+  {
+    FetchContent(acc[i], i, weeklyDevBlogs)
+    console.log("cheese" + i);
   }
  
   ClickButton(acc[i] , i)
@@ -15,13 +22,32 @@ for (i = 0; i < acc.length; i++) {
   OnExit(acc[i]);
 }
 
+ClearEmptyParagraphs();
+
+function ClearEmptyParagraphs()
+{
+  console.log("function called");
+  let paragraphs=document.querySelectorAll("p");
+  console.log(paragraphs);
+  let k;
+  for(k=0; k<paragraphs.length; k++)
+  {
+    console.log("chec");
+    if(paragraphs[k].textContent==="")
+    {
+      console.log("this should be empty");
+      paragraphs[k].style.display="none";
+    }
+  }
+}
+
 //fetching the corresponding WDB content for WDB buttons.
 //This functin looks long but it only does 4 things
 //1-creates an article section which is a child of the button
 //2-assigns the information from the wdb*-**-
- function FetchWDBContent(btn, i, weeklyDevBlogs)
+ function FetchContent(btn, i, weeklyDevBlogs)
  {
-  let panel=CreateWDBArticle(btn);
+  let panel=CreateArticle(btn);
   let {headingOne,
   oneParagraphOne,
   oneParagraphTwo,
@@ -52,7 +78,7 @@ for (i = 0; i < acc.length; i++) {
   <p>${referenceTwo}</p>`;
  }
 
- function CreateWDBArticle(btn){
+ function CreateArticle(btn){
   let panel=document.createElement("article")
   btn.appendChild(panel);
   panel.classList.add("weeks");

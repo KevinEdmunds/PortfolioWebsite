@@ -31,7 +31,7 @@ h2{
 }
 .weeks{/*for the expanded weekly dev blog paragraphs (all of them grouped together) */
     display: none;
-    padding-bottom: 300px;
+    /*padding-bottom: 300px;*/
 }
 .weeks p{
     padding: 20px;
@@ -48,11 +48,12 @@ h2{
 .centered{
     margin: 0 auto;
 }
-.WeeklyContent ul li article{ /*containers for weekly dev blogs. .weeklyDevBlogs is the section of the page that shows the weekly dev blog section in its entirety*/
+/*.WeeklyContent*/ ul li article{ /*containers for weekly dev blogs. .weeklyDevBlogs is the section of the page that shows the weekly dev blog section in its entirety*/
     width: 70%;
     margin: 0 auto;
-    margin-top: 30px;
+    margin-top: 50px;
     padding: 15px;
+    margin-bottom: 50px;
     background-color: rgba(245, 245, 220, 1);
     border-radius: 10px;
     box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
