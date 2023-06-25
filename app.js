@@ -87,6 +87,7 @@ function ClearEmptyParagraphs()
   let panel=document.createElement("article")
   btn.appendChild(panel);
   panel.classList.add("weeks");
+  panel.classList.add("entry-content");
   return panel;
  }
 
