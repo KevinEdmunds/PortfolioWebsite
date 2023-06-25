@@ -66,16 +66,19 @@ function ClearEmptyParagraphs()
   referenceOne,
   referenceTwo,} = weeklyDevBlogs[i];
  panel.innerHTML=`
-  <p><strong>${headingOne}</strong>${oneParagraphOne}</p>
+ <h3>${headingOne}</h3>
+  <p>${oneParagraphOne}</p>
   <p>${oneParagraphTwo}</p>
   <p>${oneParagraphThree}</p>
-  <p><strong>${headingTwo}</strong>${twoParagraphOne}</p>
+  <h3>${headingTwo}</h3>
+  <p>${twoParagraphOne}</p>
   <p>${twoParagraphTwo}</p>
   <p>${twoParagraphThree}</p>
-  <p><strong>${headingThree}</strong>${threeParagraphOne}</p>
+  <h3>${headingThree}</h3>
+  <p>${threeParagraphOne}</p>
   <p>${threeParagraphTwo}</p>
   <p>${threeParagraphThree}</p>
-  <strong>References: </strong>
+  <h3>References: </h3>
   <p>${referenceOne}</p>
   <p>${referenceTwo}</p>`;
  }
@@ -135,6 +138,6 @@ function ClickButton(btn, index)
       btn.style.backgroundColor = "rgba(245,245,220,1)";
     } else {
       panel.style.display = "block";
-      btn.style.backgroundColor = "rgba(245,245,220,0.5)";
+      btn.style.backgroundColor = "rgba(245,245,220,1)";
     }
   }

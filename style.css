@@ -2,7 +2,7 @@ main{
     padding-top: 50px;
     z-index: 0;
 }
-#homepage{
+#homePage{
     padding-top: 200px;
 }
 h1{
@@ -11,7 +11,7 @@ h1{
     /*font-style: italic;*/
     width: 500px;
     /*padding: -20px;*/
-    text-shadow: 3px 3px rgba(30, 40, 66, 0.445);
+    text-shadow: 2px 2px beige
 }
 
 h1 p{
@@ -25,7 +25,7 @@ h3{
 h2{
     font-size: 40px;
     text-align: center;
-    text-shadow: 3px 3px rgba(30, 40, 66, 0.445);
+    text-shadow: 2px 2px beige
 }
 #greeting{/*On the home page, smaller text underneath first part of h1*/
     font-size: 36px;
@@ -49,7 +49,7 @@ h2{
 .centered{
     margin: 0 auto;
 }
-/*.WeeklyContent*/ ul li article{ /*containers for weekly dev blogs. .weeklyDevBlogs is the section of the page that shows the weekly dev blog section in its entirety*/
+/*.weeklyContent*/ ul li article{ /*containers for weekly dev blogs. .weeklyDevBlogs is the section of the page that shows the weekly dev blog section in its entirety*/
     width: 70%;
     margin: 0 auto;
     margin-top: 50px;
@@ -71,25 +71,25 @@ ul li{
     transition: 0.5s;
 }
 
-.WeeklyContent ul li{
+.weeklyContent ul li{
     list-style: none;
 }
 .extraResearch ul li{
     list-style: none;
 }
-.WeeklyContent>ul>li>article{
+.weeklyContent>ul>li>article{
     padding-bottom: 50px;
 }
 .extraResearch>ul>li>article{
     padding-bottom: 50px;
 }
-.WeeklyContent ul li article h2{
+.weeklyContent ul li article h2{
     text-align: center;
 }
 .check{/*checkbox class - checkboxes hidden*/
     display: none;
 }
-.WeeklyContent{
+.weeklyContent{
     padding-top: 30px;
 }
 
@@ -126,8 +126,8 @@ button:hover{
 #assignmentOne:not(:checked) ~ #assignmentOneDesign{
     display: none;
 }
-#assignmentOne:checked ~ #WDBandAW>#WDBandAW>#assignmentOneSelected{
-    background-color: rgba(245, 245, 220, 0.516);
+#assignmentOne:checked ~ #toggleable>#assignmentOneSelected{
+    background-color: tomato
 }
 #assignmentThree:checked ~ #assignmentThreeDesign{
     display: block;
@@ -135,44 +135,29 @@ button:hover{
 #assignmentThree:not(:checked) ~ #assignmentThreeDesign{
     display: none;
 }
-#assignmentThree:checked ~ #WDBandAW>#WDBandAW>#assignmentThreeSelected{
+#assignmentThree:checked ~ #toggleable>#assignmentThreeSelected{
     
-    background-color: rgba(245, 245, 220, 0.516);
+    background-color: tomato
 }
-/*#IxD:not(:checked) ~ #WDBandAW>#ixdSelected{
-    background-color: beige;
-}
-#Style:checked ~ #styl{
-    display: block;
-}
-#Style:not(:checked) ~ #WDBandAW>#styleSelected{
-    background-color: beige;
-}
-#Imp:checked ~ #impl{
-    display: block;
-}
-#Imp:not(:checked) ~ #WDBandAW>#impSelected{
-    background-color: beige;
-}*/
 #aboutMeButton{
     background-color: beige;
     color: black;
     text-decoration: none;
 }
 
-#WeekDev:not(:checked) ~ #WDBandAW>#wdbSelected{
-    background-color: rgba(245, 245, 220, 0.516);
+#weekDev:not(:checked) ~ #toggleable>#wdbSelected{
+    background-color: tomato
 }
-#AR:checked ~ #WDBandAW>#arSelected{
-    background-color: rgba(245, 245, 220, 0.516);
+#AR:checked ~ #toggleable>#arSelected{
+    background-color: tomato
 }
 #AR:checked ~ .extraResearch{
     display: block;
 }
-#WeekDev:checked ~ .WeeklyContent{
+#weekDev:checked ~ .weeklyContent{
     display: none;
 }
-#WeekDev:not(:checked) ~ .WeeklyContent{
+#weekDev:not(:checked) ~ .weeklyContent{
     display: block;
 }
 label:not(.image) :not(.burgerButton):hover{
@@ -198,13 +183,7 @@ label:not(.image) :not(.burgerButton):hover{
     -moz-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
 }
 
-.pageToggle :hover{
-    cursor: pointer;
-    box-shadow: 0px -1px 24px 0px rgb(255, 255, 255);
-    -webkit-box-shadow: 0px -1px 24px 0px rgb(255, 255, 255)   ;
-    -moz-box-shadow: 0px -1px 24px 0px rgb(255, 255, 255);
-    transition: 0.3s;
-}
+
 .introText{/*Home page text underneath header*/
     margin: 0 auto;
     margin-top: 30px;
@@ -225,7 +204,7 @@ label:not(.image) :not(.burgerButton):hover{
 #essay{
     padding-bottom: 0px;
 }
-#WDBandAW{ /*WDB subheadings to switch between WDB and Additional research*/
+#toggleable{ /*WDB subheadings to switch between WDB and Additional research*/
     width: 60%;
     margin: 0 auto;
     display: flex;
@@ -237,7 +216,7 @@ label:not(.image) :not(.burgerButton):hover{
     place-content: center;  
 }
 
-.WeeklyContent{
+.weeklyContent{
     display: block;
 }
 
@@ -262,10 +241,24 @@ label:not(.image) :not(.burgerButton):hover{
     background-color: beige;
     border-radius: 7px; 
     font-size: 25px;
-
+    transition: 0.3s;
+    box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75); 
+}
+.pageToggle :hover{
+    cursor: pointer;
+    box-shadow: 0px -1px 24px 0px rgb(255, 255, 255);
+    -webkit-box-shadow: 0px -1px 24px 0px rgb(255, 255, 255)   ;
+    -moz-box-shadow: 0px -1px 24px 0px rgb(255, 255, 255);
+    transition: 0.3s;
 }
 label:hover{
     cursor: pointer;
+    box-shadow: 0px -1px 24px 0px rgb(255, 255, 255);
+    -webkit-box-shadow: 0px -1px 24px 0px rgb(255, 255, 255)   ;
+    -moz-box-shadow: 0px -1px 24px 0px rgb(255, 255, 255);
+    transition: 0.3s;
 }
 .introText > a{
     text-align: right;
@@ -279,7 +272,7 @@ label:hover{
     -webkit-box-shadow: -1px 1px 22px -1px rgba(0,0,0,0.75);
     -moz-box-shadow: -1px 1px 22px -1px rgba(0,0,0,0.75);
 }
-.DisplayPic{/*profile pictures*/
+.displayPic{/*profile pictures*/
     border-radius: 30%;
     margin: 0 30px;
     width: 350px;
@@ -288,7 +281,7 @@ label:hover{
 -webkit-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
 }
-#AboutMe{
+#aboutMe{
     width: 200px;
     height: 200px;
     border-radius: 30%;
@@ -302,7 +295,7 @@ label:hover{
     display: flex;
     justify-content: center;
 }
-.general-border{
+.generalBorder{
     width: 70%;
     margin: 0 auto;
     margin-top: 30px;
@@ -310,16 +303,16 @@ label:hover{
     padding: 15px;
     background-color: rgba(245, 245, 220, 1);
     border-radius: 10px;
-    box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
+    background-color: #f5f5dc;
+        box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
 -webkit-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.75);
-
 }
 li{
     text-decoration: none;
     list-style: none;
 }
-.general-border.narrower{
+.generalBorder.narrower{
     width: 60%;                                                                     /*chese*/
     display: none;
 }
@@ -339,10 +332,15 @@ header{
     -webkit-box-shadow: -1px 1px 22px -1px rgba(0,0,0,0.75);
     -moz-box-shadow: -1px 1px 22px -1px rgba(0,0,0,0.75);
 }
+a{
+    transition: 0.3s;
+}
 body{
     margin: 0;
     padding: 0;
     background-color:rgb(125, 125, 125);
+background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 header nav ul li{
@@ -350,7 +348,6 @@ header nav ul li{
     margin-top:20px;
     margin-right: 30px;
     display: block;
-    /*background-color: blueviolet;*/
 }
 .headerOption{
     color:rgb(0, 0, 0);
@@ -380,6 +377,7 @@ transition: 0.3s;
 }
 .active{
     background-color: rgb(255, 99, 71);
+    transition: 0.3s;
 }
 body{
     font-family: Tahoma, sans-serif;
@@ -398,7 +396,7 @@ header #logo{
 }
 header nav ul li #logo a{
     margin: 0 auto;
-    background-color: aquamarine;
+
 }
 
 .burgerButton{
@@ -415,7 +413,7 @@ header nav ul li #logo a{
 }
 
 @media (max-width:1125px){
-    #WDBandAW{ /*WDB subheadings to switch between WDB and Additional research*/
+    #toggleable{ /*WDB subheadings to switch between WDB and Additional research*/
         grid-template-columns: repeat(2, 1fr);
     }
     .burgerButton{

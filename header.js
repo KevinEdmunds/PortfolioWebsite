@@ -32,14 +32,9 @@ const pageName = currentUrl.split("/").pop();
 let headerOptions=document.getElementsByClassName("headerOption");
 let n=0;
 
-
-//console.log(pageName);
-
 for(n; n<headerOptions.length; n++)
 {
   let headerPage=headerOptions[n].href.split("/").pop();;
-  console.log("in the header: " + headerPage)
-  console.log("page name = " + pageName)
   if(pageName===headerPage)
   {
     headerOptions[n].classList.add("active");
