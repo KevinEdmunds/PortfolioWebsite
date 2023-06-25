@@ -12,7 +12,7 @@ const headerInside=`            <nav id="header">
 <ul id="headerNavSmall">
   <li>
     <a id="./home" href="index.html" class="headerOption">Home</a>
-    <a href="./writing.html" class="headerOption">Blogs</a>
+    <a href="writing.html" class="headerOption">Blogs</a>
     <a href="./design.html" class="headerOption">Design</a>
     <a href="./essay.html" class="headerOption">Essay</a>
     <a href="./aboutme.html" class="headerOption">About</a>
@@ -23,3 +23,25 @@ const headerInside=`            <nav id="header">
 header.innerHTML=headerInside;
 
 body.append(header);
+
+//After creating the header, check which page the user is on and make that header option selected
+
+const currentUrl = window.location.href;
+const pageName = currentUrl.split("/").pop();
+
+let headerOptions=document.getElementsByClassName("headerOption");
+let n=0;
+
+
+//console.log(pageName);
+
+for(n; n<headerOptions.length; n++)
+{
+  let headerPage=headerOptions[n].href.split("/").pop();;
+  console.log("in the header: " + headerPage)
+  console.log("page name = " + pageName)
+  if(pageName===headerPage)
+  {
+    headerOptions[n].classList.add("active");
+  }
+}

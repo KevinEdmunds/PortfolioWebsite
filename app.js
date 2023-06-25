@@ -1,21 +1,15 @@
 let weeklyDevBlogs
 let acc = document.getElementsByClassName("toggle");
 let weeklyDevBlogButtons = document.getElementsByClassName("wdbButton");
-//console.log(weeklyDevBlogButtons)
+
 if(!weeklyDevBlogButtons.length==0)
 {
   weeklyDevBlogs = [...wdb];  
-  console.log("weeklydevblog");
 }
 
 /*let btns = document.querySelectorAll("button");*/
-//console.log(acc);
-///*console.log(btns);*/
 
 let i;
-console.log(acc[1]);
-console.log(i);
-console.log(weeklyDevBlogs)
 
 for (i = 0; i < acc.length; i++) {
   if(acc[i].classList.contains("wdbButton"))
@@ -24,7 +18,6 @@ for (i = 0; i < acc.length; i++) {
   }else if(acc[i].classList.contains("arButton"))
   {
     FetchContent(acc[i], i, weeklyDevBlogs)
-    console.log("cheese" + i);
   }
  
   ClickButton(acc[i] , i)
@@ -34,6 +27,9 @@ for (i = 0; i < acc.length; i++) {
 
 ClearEmptyParagraphs();
 
+//is used to check if a field from a data.js item has a string of text or not
+//I used a template to insert my weekly dev blogs. 
+//The template overcompensates the number of paragraphs for some of
 function ClearEmptyParagraphs()
 {
   let paragraphs=document.querySelectorAll("p");
@@ -50,7 +46,7 @@ function ClearEmptyParagraphs()
 //fetching the corresponding WDB content for WDB buttons.
 //This functin looks long but it only does 4 things
 //1-creates an article section which is a child of the button
-//2-assigns the information from the wdb*-**-
+//2-assigns the information from the wdb
  function FetchContent(btn, i, weeklyDevBlogs)
  {
   let panel=CreateArticle(btn);
@@ -131,9 +127,8 @@ function ClickButton(btn, index)
     })
   }
 
-  //click event listener options
+  //click event listener section toggle
   function Clicked(panel, btn){
-
     btn.classList.toggle("active");
     if (panel.style.display === "block") {
       panel.style.display = "none";
